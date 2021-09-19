@@ -17,6 +17,7 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
+  object-position: 50% 0%;
 }
 
 @media (min-width: 300px) {

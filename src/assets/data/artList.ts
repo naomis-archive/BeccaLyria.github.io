@@ -109,4 +109,10 @@ export const artList: ArtInt[] = [
     artist: 'Unknown',
     artistUrl: 'https://www.beccalyria.com',
   },
+  {
+    fileName: 'claudoodles.png',
+    artName: 'Untitled',
+    artist: 'claudoodles',
+    artistUrl: 'https://twitter.com/claudoodles_'
+  }
 ];
