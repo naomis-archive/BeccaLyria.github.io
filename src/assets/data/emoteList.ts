@@ -37,6 +37,10 @@ export const emoteList: EmoteInt[] = [
     emoteName: 'Huh',
   },
   {
+    fileName: 'BeccaHyper.png',
+    emoteName: 'Hyper'
+  },
+  {
     fileName: 'BeccaLaugh.png',
     emoteName: 'Laugh',
   },
@@ -87,6 +91,10 @@ export const emoteList: EmoteInt[] = [
   {
     fileName: 'BeccaSmug.png',
     emoteName: 'Smug',
+  },
+  {
+    fileName: 'BeccaSnug.png',
+    emoteName: 'Snug'
   },
   {
     fileName: 'BeccaSweat.png',
