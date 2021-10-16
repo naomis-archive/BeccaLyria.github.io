@@ -9,8 +9,20 @@ export const emoteList: EmoteInt[] = [
     emoteName: 'Angry',
   },
   {
+    fileName: 'BeccaArt.png',
+    emoteName: 'Art',
+  },
+  {
+    fileName: 'BeccaBan.png',
+    emoteName: 'Ban',
+  },
+  {
     fileName: 'BeccaBlush.png',
     emoteName: 'Blush',
+  },
+  {
+    fileName: 'BeccaCheer.png',
+    emoteName: 'Cheer',
   },
   {
     fileName: 'BeccaCry.png',
@@ -38,7 +50,7 @@ export const emoteList: EmoteInt[] = [
   },
   {
     fileName: 'BeccaHyper.png',
-    emoteName: 'Hyper'
+    emoteName: 'Hyper',
   },
   {
     fileName: 'BeccaLaugh.png',
@@ -94,7 +106,7 @@ export const emoteList: EmoteInt[] = [
   },
   {
     fileName: 'BeccaSnug.png',
-    emoteName: 'Snug'
+    emoteName: 'Snug',
   },
   {
     fileName: 'BeccaSweat.png',
