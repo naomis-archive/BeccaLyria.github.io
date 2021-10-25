@@ -77,7 +77,8 @@ export const artList: ArtInt[] = [
     fileName: 'Princess Geekfayce.png',
     artName: 'Untitled',
     artist: 'Princess Geekfayce',
-    artistUrl: 'https://www.gaiaonline.com/profiles/princess-geekfayce/5671848/',
+    artistUrl:
+      'https://www.gaiaonline.com/profiles/princess-geekfayce/5671848/',
   },
   {
     fileName: 'RinHekka.png',
@@ -113,6 +114,12 @@ export const artList: ArtInt[] = [
     fileName: 'claudoodles.png',
     artName: 'Untitled',
     artist: 'claudoodles',
-    artistUrl: 'https://twitter.com/claudoodles_'
-  }
+    artistUrl: 'https://twitter.com/claudoodles_',
+  },
+  {
+    fileName: 'Lena_Smith11.jpg',
+    artName: 'Untitled',
+    artist: 'Lena',
+    artistUrl: 'https://twitter.com/lena_smith11',
+  },
 ];
