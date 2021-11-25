@@ -128,4 +128,10 @@ export const artList: ArtInt[] = [
     artist: 'HalleyWoofs',
     artistUrl: 'https://halleywoofs.art',
   },
+  {
+    fileName: 'kato_token.png',
+    artName: 'Token',
+    artist: 'Kato',
+    artistUrl: 'https://362studios.carrd.co/',
+  },
 ];
