@@ -74,4 +74,9 @@ export const GameList: GameInt[] = [
     gameUrl:
       'https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous/',
   },
+  {
+    fileName: 'dos2.jpg',
+    gameName: 'Divinity: Original Sin II',
+    gameUrl: 'https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/',
+  }
 ];

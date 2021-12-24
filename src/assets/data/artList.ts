@@ -134,4 +134,10 @@ export const artList: ArtInt[] = [
     artist: 'Kato',
     artistUrl: 'https://362studios.carrd.co/',
   },
+  {
+    fileName: 'melty-wink.jpg',
+    artName: 'Wink',
+    artist: 'MeltyDraws',
+    artistUrl: 'https://twitter.com/MeltyDraws',
+  }
 ];
