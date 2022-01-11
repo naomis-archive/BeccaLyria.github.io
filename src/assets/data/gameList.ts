@@ -77,6 +77,13 @@ export const GameList: GameInt[] = [
   {
     fileName: 'dos2.jpg',
     gameName: 'Divinity: Original Sin II',
-    gameUrl: 'https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/',
-  }
+    gameUrl:
+      'https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/',
+  },
+  {
+    fileName: 'skyrim.jpg',
+    gameName: 'Skyrim: Special Edition',
+    gameUrl:
+      'https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/',
+  },
 ];
