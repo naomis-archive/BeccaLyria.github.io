@@ -2,6 +2,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
+const texts = [
+  'Becca Lyria is a community management and moderation bot for Discord.',
+  'She offers many features, such as the ability to track moderation history for your users...',
+  'Extensive and highly configurable logging...',
+  'Multiple customisation options...',
+  "And more! And all of Becca's features are 100% free!",
+];
+
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
@@ -23,10 +31,10 @@ describe('HomeComponent', () => {
 
   it('should render the expected text', () => {
     const header = compiled.querySelector('h1');
-    const texts = compiled.querySelectorAll('p');
+    const ps = compiled.querySelectorAll('p');
     expect(header.innerText.trim()).toBe('Becca Lyria');
-    expect(texts[0].innerText.trim()).toBe(
-      `Hello there! I'm Becca Lyria. It is very nice to meet you.`
-    );
+    for (let i = 0; i < texts.length; i++) {
+      expect(ps[i].innerText.trim()).toBe(texts[i]);
+    }
   });
 });

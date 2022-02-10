@@ -16,15 +16,3 @@ nav {
 h1 {
   text-decoration: underline;
 }
-
-a {
-  -webkit-transition: -webkit-filter 0.4s ease;
-  transition: -webkit-filter 0.4s ease;
-  transition: filter 0.4s ease;
-  transition: filter 0.4s ease, -webkit-filter 0.4s ease;
-}
-
-a:hover {
-  -webkit-filter: brightness(200%);
-  filter: brightness(200%);
-}

@@ -3,10 +3,10 @@ import { NavbarComponent } from './navbar.component';
 
 const links = [
   { text: 'Becca Lyria', url: '/' },
-  { text: 'About Me!', url: '/bio' },
-  { text: 'View Art', url: '/gallery' },
-  { text: 'My Adventures', url: '/adventures' },
-  { text: 'Emotes', url: '/emotes' },
+  { text: 'Add to Server', url: 'https://invite.beccalyria.com' },
+  { text: 'Documentation', url: 'https://docs.beccalyria.com' },
+  { text: 'Dashboard', url: 'https://dash.beccalyria.com' },
+  { text: "Who's Becca?", url: '/becca' },
 ];
 
 describe('NavbarComponent', () => {
@@ -34,7 +34,9 @@ describe('NavbarComponent', () => {
       links.length
     );
     linkElements.forEach((el: any, i) => {
-      expect(el.getAttribute('routerLink')).toBe(links[i].url);
+      expect(el.getAttribute('routerLink') || el.getAttribute('href')).toBe(
+        links[i].url
+      );
       expect(el.innerText.trim()).toBe(links[i].text);
     });
   });
