@@ -12,6 +12,7 @@ import { GamesComponent } from './games/games.component';
 import { Router } from '@angular/router';
 import { EmotesComponent } from './emotes/emotes.component';
 import { FooterComponent } from './footer/footer.component';
+import { BeccaComponent } from './becca/becca.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     BioComponent,
     GamesComponent,
     EmotesComponent,
-    FooterComponent
+    FooterComponent,
+    BeccaComponent
   ],
   imports: [
     BrowserModule,

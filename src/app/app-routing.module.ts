@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BeccaComponent } from './becca/becca.component';
 import { BioComponent } from './bio/bio.component';
 import { EmotesComponent } from './emotes/emotes.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'bio', component: BioComponent },
   { path: 'adventures', component: GamesComponent },
   { path: 'emotes', component: EmotesComponent },
+  { path: 'becca', component: BeccaComponent }
 ];
 
 @NgModule({

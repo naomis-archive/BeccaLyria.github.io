@@ -2,13 +2,14 @@
   display: grid;
   row-gap: 10px;
   column-gap: 10px;
+  background-color: var(--light-purple)
 }
 
 .grid-box {
   width: 200px;
   height: 250px;
   text-align: center;
-  background-color: #3a3240;
+  background-color: var(--dark-purple);
   border-radius: 10px;
   padding: 10px 0px;
 }
