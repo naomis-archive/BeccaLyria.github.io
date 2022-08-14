@@ -1,12 +1,12 @@
 <h1>My Art!</h1>
 <p>These art works were commissioned from an artist specifically for me.</p>
 <div class="grid-container">
-  <div class="grid-box" *ngFor="let art of artList">
-    <a href="../../assets/art/{{ art.fileName }}" target="_blank"
-      ><img
-        class="grid-image art-image"
-        src="../../assets/art/{{ art.fileName }}"
-    /></a>
+  <div class="grid-box" *ngFor="let art of artList; let i=index">
+    <img
+      (click)="open(i)"
+      class="grid-image art-image"
+      src="../../assets/art/{{ art.fileName }}"
+    />
     <hr />
     <p>
       <em class="art-name">{{ art.artName }}</em> by

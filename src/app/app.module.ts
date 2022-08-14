@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 import { EmotesComponent } from './emotes/emotes.component';
 import { FooterComponent } from './footer/footer.component';
 import { BeccaComponent } from './becca/becca.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BeccaComponent } from './becca/becca.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    [LightboxModule]
   ],
   providers: [
     {
@@ -43,7 +45,7 @@ import { BeccaComponent } from './becca/becca.component';
     },
     {
       provide: APP_INITIALIZER,
-      useFactory: () => () => {},
+      useFactory: () => () => { },
       deps: [Sentry.TraceService],
       multi: true,
     },

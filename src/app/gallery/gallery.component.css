@@ -21,6 +21,10 @@
   object-position: 50% 0%;
 }
 
+.grid-image:hover{
+  opacity: .85;
+}
+
 @media (min-width: 300px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
