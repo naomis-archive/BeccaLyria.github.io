@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 import { EmotesComponent } from './emotes/emotes.component';
 import { FooterComponent } from './footer/footer.component';
 import { BeccaComponent } from './becca/becca.component';
-import { LightboxModule } from 'ngx-lightbox';
+import { LightboxModule, Lightbox, LightboxConfig, LightboxEvent } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,15 @@ import { LightboxModule } from 'ngx-lightbox';
     GamesComponent,
     EmotesComponent,
     FooterComponent,
-    BeccaComponent
+    BeccaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    [LightboxModule]
+    LightboxModule
   ],
   providers: [
+    [Lightbox, LightboxModule, LightboxConfig, LightboxEvent],
     {
       provide: ErrorHandler,
       useValue: Sentry.createErrorHandler({

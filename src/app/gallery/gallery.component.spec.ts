@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Lightbox, LightboxConfig, LightboxEvent, LightboxModule } from 'ngx-lightbox';
 import { artList } from 'src/assets/data/artList';
 
 import { GalleryComponent } from './gallery.component';
@@ -11,6 +12,7 @@ describe('GalleryComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [GalleryComponent],
+      providers: [Lightbox, LightboxModule, LightboxConfig, LightboxEvent],
     }).compileComponents();
     fixture = TestBed.createComponent(GalleryComponent);
     component = fixture.componentInstance;
