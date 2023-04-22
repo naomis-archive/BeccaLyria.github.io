@@ -8,9 +8,22 @@ import { ArtInt, artList } from 'src/assets/data/artList';
 })
 export class GalleryComponent implements OnInit {
   artList: ArtInt[] = [];
-  constructor() {}
+
+  selectedArt?: ArtInt;
+
+
+  constructor() { }
 
   ngOnInit(): void {
     this.artList = artList;
   }
+
+  viewCloser(art: ArtInt) {
+    this.selectedArt = art;
+  }
+
+  closeModal() {
+    this.selectedArt = undefined;
+  }
 }
+
