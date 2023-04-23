@@ -11,17 +11,21 @@ export class GalleryComponent implements OnInit {
 
   selectedArt?: ArtInt;
 
-
-  constructor() { }
-
   ngOnInit(): void {
     this.artList = artList;
   }
 
+  /**
+   * Sets the artwork to be seen in the full screen view
+   * @param art The art intended for full-screen view
+   */
   viewCloser(art: ArtInt) {
     this.selectedArt = art;
   }
 
+  /**
+   * Closes the full screen view of the image.
+   */
   closeModal() {
     this.selectedArt = undefined;
   }
