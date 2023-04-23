@@ -6,11 +6,18 @@ import { ArtInt, artList } from 'src/assets/data/artList';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
 })
+
+  /**
+   * The page that displays all of the accumulated BeccaLyria artwork.
+   */
 export class GalleryComponent implements OnInit {
   artList: ArtInt[] = [];
 
   selectedArt?: ArtInt;
 
+  /**
+   * Loads all the images to be displayed in the gallery when the page is loaded.
+   */
   ngOnInit(): void {
     this.artList = artList;
   }
