@@ -1,22 +1,28 @@
 <h1>My Art!</h1>
 <p>These art works were commissioned from an artist specifically for me.</p>
+
+
+<div *ngIf="selectedArt">
+  <div class="modal">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <p class="picture-caption">
+      <em class="art-name">{{ selectedArt.artName }}</em> by
+      <a href="{{ selectedArt.artistUrl }}" target="_blank" rel="noopener noreferrer" class="artist-link">{{selectedArt.artist
+        }}</a>
+    </p>
+    <img class="modal-content" alt="{{selectedArt.artName}}" id="fullView"
+      src="../../assets/art/{{ selectedArt.fileName}}" />
+  </div>
+</div>
+
 <div class="grid-container">
   <div class="grid-box" *ngFor="let art of artList">
-    <a href="../../assets/art/{{ art.fileName }}" target="_blank"
-      ><img
-        class="grid-image art-image"
-        src="../../assets/art/{{ art.fileName }}"
-    /></a>
+    <img class="grid-image art-image" alt="{{art.artName}}" (click)="viewCloser(art)"
+      src="../../assets/art/{{ art.fileName }}" />
     <hr />
     <p>
       <em class="art-name">{{ art.artName }}</em> by
-      <a
-        href="{{ art.artistUrl }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="artist-link"
-        >{{ art.artist }}</a
-      >
+      <a href="{{ art.artistUrl }}" target="_blank" rel="noopener noreferrer" class="artist-link">{{ art.artist }}</a>
     </p>
   </div>
 </div>
