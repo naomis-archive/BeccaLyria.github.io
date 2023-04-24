@@ -70,11 +70,14 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  text-align: center;
 }
 
 .modal-content {
   animation-name: zoom;
   animation-duration: 0.6s;
+  max-height: calc(90vh - 100px - 2rem);
+  margin: 0 auto;
 }
 
 /* The Close Button */
