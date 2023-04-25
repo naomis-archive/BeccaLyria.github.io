@@ -11,14 +11,14 @@
         }}</a>
     </p>
     <img class="modal-content" alt="{{selectedArt.artName}}" id="fullView"
-      src="../../assets/art/{{ selectedArt.fileName}}" />
+      src="https://cdn.naomi.lgbt/becca/art/{{ selectedArt.fileName }}" />
   </div>
 </div>
 
 <div class="grid-container">
   <div class="grid-box" *ngFor="let art of artList">
     <img class="grid-image art-image" alt="{{art.artName}}" (click)="viewCloser(art)"
-      src="../../assets/art/{{ art.fileName }}" />
+      src="https://cdn.naomi.lgbt/becca/art/{{ art.fileName }}" />
     <hr />
     <p>
       <em class="art-name">{{ art.artName }}</em> by
