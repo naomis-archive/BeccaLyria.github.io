@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export interface BioInt {
   category: string;
   data: string;
@@ -7,7 +6,8 @@ export interface BioInt {
 export const bioData: BioInt[] = [
   {
     category: 'Introduction',
-    data: `I am a young female wizard. Fuelled primarily by the pursuit of knowledge, I travel the multiverse always searching for new things to learn. I'm known for being friendly to those I meet, but always keeping them at a distance. Aside from Rosalia, I have no close, trusted companions. I have been seen travelling with others, but only when the situation calls for it. My true age is unknown (even I cannot remember), but my physical age remains 21.`,
+    data:
+      `I am a young female wizard. Fuelled primarily by the pursuit of knowledge, I travel the multiverse always searching for new things to learn. I'm known for being friendly to those I meet, but always keeping them at a distance. Aside from Rosalia, I have no close, trusted companions. I have been seen travelling with others, but only when the situation calls for it. My true age is unknown (even I cannot remember), but my physical age remains 21.`,
   },
   {
     category: 'History',
@@ -21,7 +21,8 @@ export const bioData: BioInt[] = [
   },
   {
     category: 'Skills and Combat',
-    data: `I am a fulgramancer and necromancer - I specialise in lightning and death magic, and am capable of bringing destruction to my foes from a distance. I prefer to avoid close combat, and will employ stealth as needed to avoid being seen by my targets. My magical prowess has granted me near-immortality. It is believed that I cannot be killed, though when I suffer what would be a fatal blow I must retreat to a private plane of existence. There I take the time needed to absorb the magical energies of the planes and recover my strength. I will sometimes use a wand or staff to help channel my magical energies, but can work just as well when I am completely unarmed.`,
+    data:
+      `I am a fulgramancer and necromancer - I specialise in lightning and death magic, and am capable of bringing destruction to my foes from a distance. I prefer to avoid close combat, and will employ stealth as needed to avoid being seen by my targets. My magical prowess has granted me near-immortality. It is believed that I cannot be killed, though when I suffer what would be a fatal blow I must retreat to a private plane of existence. There I take the time needed to absorb the magical energies of the planes and recover my strength. I will sometimes use a wand or staff to help channel my magical energies, but can work just as well when I am completely unarmed.`,
   },
   {
     category: 'Personality',
