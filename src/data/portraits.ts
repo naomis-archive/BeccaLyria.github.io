@@ -1,11 +1,6 @@
-export interface ArtInt {
-  fileName: string;
-  artName: string;
-  artist: string;
-  artistUrl: string;
-}
+import { Portrait } from 'src/interfaces/Portrait';
 
-export const artList: ArtInt[] = [
+export const portraits: Portrait[] = [
   {
     fileName: 'Moonlight 1.png',
     artName: 'Becca Lyria',
@@ -139,5 +134,5 @@ export const artList: ArtInt[] = [
     artName: 'Wink',
     artist: 'MeltyDraws',
     artistUrl: 'https://twitter.com/MeltyDraws',
-  }
+  },
 ];
