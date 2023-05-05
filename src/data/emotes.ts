@@ -46,10 +46,6 @@ export const emotes: Emote[] = [
     name: 'Huh',
   },
   {
-    fileName: 'BeccaHyper.png',
-    name: 'Hyper',
-  },
-  {
     fileName: 'BeccaLaugh.png',
     name: 'Laugh',
   },
@@ -140,6 +136,10 @@ export const emotes: Emote[] = [
   {
     fileName: 'BeccaYawn.png',
     name: 'Yawn',
+  },
+  {
+    fileName: 'BeccaYESSS.png',
+    name: 'YESSS',
   },
   {
     fileName: 'BeccaYikes.png',

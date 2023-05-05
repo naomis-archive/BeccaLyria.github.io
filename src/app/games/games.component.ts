@@ -8,17 +8,11 @@ import { Adventure } from 'src/interfaces/Adventure';
   styleUrls: ['./games.component.css'],
 })
 export class GamesComponent implements OnInit {
-  public view = 'intro';
   public games: Adventure[] = [];
   public currentGameIndex = 0;
 
   ngOnInit(): void {
     this.games = adventures.sort((a, b) => a.game.localeCompare(b.game));
-  }
-
-  changeView(name: string) {
-    this.view = name;
-    window.scrollTo({ top: 0 });
   }
 
   nextGame() {

@@ -34,6 +34,10 @@ export const adventures: Adventure[] = [
     game: 'Immortals: Fenix Rising',
   },
   {
+    fileName: 'koikatsu.png',
+    game: 'Koikatsu Party',
+  },
+  {
     fileName: 'tyranny.png',
     game: 'Tyranny',
   },

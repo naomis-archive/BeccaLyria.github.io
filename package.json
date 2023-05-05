@@ -4,8 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "node generateJson.js",
     "build": "ng build",
+    "pretest": "node loadFiles.js",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "posttest": "node resetFiles.js",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng deploy"
