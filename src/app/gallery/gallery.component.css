@@ -1,105 +1,35 @@
-.grid-container {
-  display: grid;
-  row-gap: 10px;
-  column-gap: 10px;
-  background-color: var(--light-purple);
+select {
+  display: block;
+  margin: auto;
 }
 
-.grid-box {
-  width: 200px;
-  height: 250px;
-  text-align: center;
+.image {
   background-color: var(--dark-purple);
-  border-radius: 10px;
-  padding: 10px 0px;
+  color: var(--light-purple);
+  padding: 10px;
 }
 
-.grid-image {
-  width: 150px;
-  height: 150px;
+.image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 0%;
+  object-position: top center;
 }
 
-@media (min-width: 300px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
+.image a {
+  position: relative;
 }
 
-@media (min-width: 700px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width: 299px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/*
-
- The Modal
-*/
-
-@keyframes zoom {
-  from {
-    transform: scale(0.1);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
-
-.modal {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-  text-align: center;
-}
-
-.modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  max-height: calc(90vh - 100px - 2rem);
-  margin: 0 auto;
-}
-
-/* The Close Button */
-.close {
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   position: absolute;
-  top: 55px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+  top: 0;
+  color: red;
+  transform: rotate(45deg);
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.picture-caption
-{
-  text-align: center;
-  font-size: 2rem;
+a:not(.nes-btn) {
+  color: var(--light-blue);
 }

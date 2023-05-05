@@ -1,151 +1,148 @@
-export interface EmoteInt {
-  fileName: string;
-  emoteName: string;
-}
+import { Emote } from 'src/interfaces/Emote';
 
-export const emoteList: EmoteInt[] = [
+export const emotes: Emote[] = [
   {
     fileName: 'BeccaAngry.png',
-    emoteName: 'Angry',
+    name: 'Angry',
   },
   {
     fileName: 'BeccaArt.png',
-    emoteName: 'Art',
+    name: 'Art',
   },
   {
     fileName: 'BeccaBan.png',
-    emoteName: 'Ban',
+    name: 'Ban',
   },
   {
     fileName: 'BeccaBlush.png',
-    emoteName: 'Blush',
+    name: 'Blush',
   },
   {
     fileName: 'BeccaCheer.png',
-    emoteName: 'Cheer',
+    name: 'Cheer',
   },
   {
     fileName: 'BeccaCry.png',
-    emoteName: 'Cry',
+    name: 'Cry',
   },
   {
     fileName: 'BeccaDrunk.png',
-    emoteName: 'Drunk',
+    name: 'Drunk',
   },
   {
     fileName: 'BeccaFacepalm.png',
-    emoteName: 'Facepalm',
+    name: 'Facepalm',
   },
   {
     fileName: 'BeccaHeart.png',
-    emoteName: 'Heart',
+    name: 'Heart',
   },
   {
     fileName: 'BeccaHello.png',
-    emoteName: 'Hello',
+    name: 'Hello',
   },
   {
     fileName: 'BeccaHuh.png',
-    emoteName: 'Huh',
+    name: 'Huh',
   },
   {
     fileName: 'BeccaHyper.png',
-    emoteName: 'Hyper',
+    name: 'Hyper',
   },
   {
     fileName: 'BeccaLaugh.png',
-    emoteName: 'Laugh',
+    name: 'Laugh',
   },
   {
     fileName: 'BeccaNom.png',
-    emoteName: 'Nom',
+    name: 'Nom',
   },
   {
     fileName: 'BeccaNotes.png',
-    emoteName: 'Notes',
+    name: 'Notes',
   },
   {
     fileName: 'BeccaPeek.png',
-    emoteName: 'Peek',
+    name: 'Peek',
   },
   {
     fileName: 'BeccaPout.png',
-    emoteName: 'Pout',
+    name: 'Pout',
   },
   {
     fileName: 'BeccaSalute.png',
-    emoteName: 'Salute',
+    name: 'Salute',
   },
   {
     fileName: 'BeccaScared.png',
-    emoteName: 'Scared',
+    name: 'Scared',
   },
   {
     fileName: 'BeccaShrug.png',
-    emoteName: 'Shrug',
+    name: 'Shrug',
   },
   {
     fileName: 'BeccaSigh.png',
-    emoteName: 'Sigh',
+    name: 'Sigh',
   },
   {
     fileName: 'BeccaSing.png',
-    emoteName: 'Sing',
+    name: 'Sing',
   },
   {
     fileName: 'BeccaSip.png',
-    emoteName: 'Sip',
+    name: 'Sip',
   },
   {
     fileName: 'BeccaSmile.png',
-    emoteName: 'Smile',
+    name: 'Smile',
   },
   {
     fileName: 'BeccaSmug.png',
-    emoteName: 'Smug',
+    name: 'Smug',
   },
   {
     fileName: 'BeccaSnug.png',
-    emoteName: 'Snug',
+    name: 'Snug',
   },
   {
     fileName: 'BeccaSweat.png',
-    emoteName: 'Sweat',
+    name: 'Sweat',
   },
   {
     fileName: 'BeccaThink.png',
-    emoteName: 'Think',
+    name: 'Think',
   },
   {
     fileName: 'BeccaThis.png',
-    emoteName: 'This',
+    name: 'This',
   },
   {
     fileName: 'BeccaThumbsup.png',
-    emoteName: 'Thumbs Up',
+    name: 'Thumbs Up',
   },
   {
     fileName: 'BeccaUWU.png',
-    emoteName: 'UWU',
+    name: 'UWU',
   },
   {
     fileName: 'BeccaWink.png',
-    emoteName: 'Wink',
+    name: 'Wink',
   },
   {
     fileName: 'BeccaWoah.png',
-    emoteName: 'Woah',
+    name: 'Woah',
   },
   {
     fileName: 'BeccaWork.png',
-    emoteName: 'Work',
+    name: 'Work',
   },
   {
     fileName: 'BeccaYawn.png',
-    emoteName: 'Yawn',
+    name: 'Yawn',
   },
   {
     fileName: 'BeccaYikes.png',
-    emoteName: 'Yikes',
+    name: 'Yikes',
   },
 ];

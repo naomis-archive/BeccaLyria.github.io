@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { artList } from 'src/assets/data/artList';
+import { portraits } from 'src/data/portraits';
 
 import { GalleryComponent } from './gallery.component';
 
@@ -23,7 +23,7 @@ describe('GalleryComponent', () => {
   });
 
   it('should load the art data correctly', () => {
-    expect(component.artList).toEqual(artList);
+    expect(component.portraits).toEqual(portraits);
   });
 
   it('should render the opening texts correctly', () => {
@@ -37,7 +37,7 @@ describe('GalleryComponent', () => {
 
   it('should render the art data correctly', () => {
     const artTiles = compiled.querySelectorAll('.grid-box');
-    artList.forEach((art, i) => {
+    portraits.forEach((art, i) => {
       const artLink = artTiles[i].querySelector('img').getAttribute('src');
       const artName = artTiles[i].querySelector('.art-name').innerText.trim();
       const artistLink = artTiles[i]

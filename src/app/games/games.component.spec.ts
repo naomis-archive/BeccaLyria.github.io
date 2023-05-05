@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GameList } from 'src/assets/data/gameList';
+import { GameList } from 'src/data/gameList';
 
 import { GamesComponent } from './games.component';
 
