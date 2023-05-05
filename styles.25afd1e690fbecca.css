@@ -1,1 +1,0 @@
-:root{--dark-purple: #3a3240;--light-purple: #aea8d3}body{color:var(--light-purple);background-color:var(--dark-purple)}a{color:inherit;position:relative;font-weight:700}a:hover{color:#fff;background-color:var(--dark-purple);transition:color .4s ease}
