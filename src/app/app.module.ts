@@ -10,6 +10,7 @@ import { BioComponent } from './bio/bio.component';
 import { GamesComponent } from './games/games.component';
 import { Router } from '@angular/router';
 import { BeccaComponent } from './becca/becca.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { BeccaComponent } from './becca/becca.component';
     GamesComponent,
     BeccaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     {
       provide: ErrorHandler,
