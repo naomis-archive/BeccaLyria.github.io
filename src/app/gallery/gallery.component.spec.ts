@@ -1,10 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { portraits } from 'src/data/portraits';
 
 import { GalleryComponent } from './gallery.component';
-import { poses } from 'src/data/poses';
-import { artFiles, emotesFiles, posesFiles } from 'src/assets/fileList';
-import { emotes } from 'src/data/emotes';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('GalleryComponent', () => {
   let component: GalleryComponent;
@@ -14,9 +11,37 @@ describe('GalleryComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [GalleryComponent],
+      imports: [HttpClientModule],
     }).compileComponents();
     fixture = TestBed.createComponent(GalleryComponent);
     component = fixture.componentInstance;
+    component.portraits = [
+      {
+        fileName: 'Moonlight 1.png',
+        name: 'Becca Lyria',
+        artist: 'Moonlight',
+        url: 'https://www.instagram.com/moonlightkcreations/',
+        alt: 'Banner art of Becca.',
+      },
+      {
+        fileName: 'Moonlight 3.png',
+        name: 'A Forest Adventure',
+        artist: 'Moonlight',
+        url: 'https://www.instagram.com/moonlightkcreations/',
+        alt: 'Becca with one eye closed, pushing through some trees in a forest, wearing a purple corset and pants.',
+      },
+    ];
+    component.emotes = [
+      {
+        fileName: 'BeccaAngry.png',
+        name: 'Angry',
+      },
+      {
+        fileName: 'BeccaArt.png',
+        name: 'Art',
+      },
+    ];
+    component.poses = ['cheer.png', 'magic.png'];
     fixture.detectChanges();
     compiled = fixture.nativeElement;
   });
@@ -64,10 +89,10 @@ describe('GalleryComponent', () => {
     expect(buttons[4].getAttribute('routerLink')).toBe('/becca');
   });
 
-  for (const portrait of portraits) {
-    it(`should render the ${portrait.fileName} art`, () => {
+  it(`should render the art correctly`, () => {
+    for (const portrait of component.portraits) {
       component.changeView('portrait');
-      component.selectPortrait(String(portraits.indexOf(portrait)));
+      component.selectPortrait(String(component.portraits.indexOf(portrait)));
       fixture.detectChanges();
       compiled = fixture.nativeElement;
       expect(component.view).toBe('portrait');
@@ -79,7 +104,7 @@ describe('GalleryComponent', () => {
       );
       expect(imageLink?.getAttribute('target')).toBe('_blank');
       const artistLink = links?.[1];
-      expect(artistLink?.getAttribute('href')).toBe(portrait.artistUrl);
+      expect(artistLink?.getAttribute('href')).toBe(portrait.url);
       expect(artistLink?.getAttribute('target')).toBe('_blank');
       const img = portraitBox?.querySelector('img');
       expect(img?.getAttribute('src')).toBe(
@@ -87,26 +112,11 @@ describe('GalleryComponent', () => {
       );
       expect(img?.getAttribute('alt')).toBe('');
       const title = portraitBox?.querySelector('p');
-      expect(title?.textContent?.trim()).toBe(`By ${portrait.artist}`);
-    });
-  }
-
-  it(`should have data for all portraits`, () => {
-    expect(portraits.length).toBe(artFiles.length);
+      expect(title?.textContent?.trim()).toBe(
+        `${portrait.name} By ${portrait.artist}`
+      );
+    }
   });
-
-  for (const data of portraits) {
-    it(`${data.fileName} should exist in the CDN`, () => {
-      expect(artFiles).toContain(data.fileName);
-    });
-  }
-
-  for (const file of artFiles) {
-    it(`should display the ${file} portrait`, () => {
-      const portrait = portraits.find((p) => p.fileName === file);
-      expect(portrait).toBeDefined();
-    });
-  }
 
   it('should render the emote view', () => {
     component.changeView('emote');
@@ -130,10 +140,10 @@ describe('GalleryComponent', () => {
     expect(buttons[4].getAttribute('routerLink')).toBe('/becca');
   });
 
-  for (const emote of emotes) {
-    it(`should render the ${emote.fileName} emote`, () => {
+  it(`should render the emotes correctly`, () => {
+    for (const emote of component.emotes) {
       component.changeView('emote');
-      component.selectEmote(String(emotes.indexOf(emote)));
+      component.selectEmote(String(component.emotes.indexOf(emote)));
       fixture.detectChanges();
       compiled = fixture.nativeElement;
       expect(component.view).toBe('emote');
@@ -150,25 +160,8 @@ describe('GalleryComponent', () => {
       expect(img?.getAttribute('alt')).toBe('Naomi');
       const title = emoteBox?.querySelector('p');
       expect(title?.textContent?.trim()).toBe(emote.name);
-    });
-  }
-
-  it(`should have data for all emotes`, () => {
-    expect(emotes.length).toBe(emotesFiles.length);
+    }
   });
-
-  for (const data of emotes) {
-    it(`${data.fileName} should exist in the CDN`, () => {
-      expect(emotesFiles).toContain(data.fileName);
-    });
-  }
-
-  for (const file of emotesFiles) {
-    it(`should display the ${file} portrait`, () => {
-      const emote = emotes.find((e) => e.fileName === file);
-      expect(emote).toBeDefined();
-    });
-  }
 
   it('should render the murals view', () => {
     component.changeView('pose');
@@ -192,10 +185,10 @@ describe('GalleryComponent', () => {
     expect(buttons[4].getAttribute('routerLink')).toBe('/becca');
   });
 
-  for (const pose of poses) {
-    it(`should render the ${pose} pose`, () => {
+  it(`should render the poses correctly`, () => {
+    for (const pose of component.poses) {
       component.changeView('pose');
-      component.selectPose(String(poses.indexOf(pose)));
+      component.selectPose(String(component.poses.indexOf(pose)));
       fixture.detectChanges();
       compiled = fixture.nativeElement;
       expect(component.view).toBe('pose');
@@ -212,25 +205,8 @@ describe('GalleryComponent', () => {
       expect(img?.getAttribute('alt')).toBe('Naomi');
       const title = emoteBox?.querySelector('p');
       expect(title?.textContent?.trim()).toBe(
-        component.getPoseName(poses.indexOf(pose))
+        component.getPoseName(component.poses.indexOf(pose))
       );
-    });
-  }
-
-  it(`should have data for all poses`, () => {
-    expect(poses.length).toBe(posesFiles.length);
+    }
   });
-
-  for (const data of poses) {
-    it(`${data} should exist in the CDN`, () => {
-      expect(posesFiles).toContain(data);
-    });
-  }
-
-  for (const file of posesFiles) {
-    it(`should display the ${file} pose`, () => {
-      const pose = poses.find((p) => p === file);
-      expect(pose).toBeDefined();
-    });
-  }
 });
