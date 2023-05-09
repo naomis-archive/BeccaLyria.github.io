@@ -19,10 +19,15 @@ describe('GamesComponent', () => {
       {
         fileName: 'cladun.png',
         game: 'Cladun X2',
+        alt: 'A pixel art version of Becca, holding a purple staff with blue lighting coming from the tip.',
+        description:
+          "Not Becca's favourite adventure, but it was still lucrative!",
       },
       {
         fileName: 'code-vein.png',
         game: 'CODE VEIN',
+        alt: 'Becca wearing a purple tshirt, purple miniskirt, and purple boots.',
+        description: 'This was a tough world to navigate, but she managed.',
       },
     ];
     fixture.detectChanges();
@@ -68,9 +73,11 @@ describe('GamesComponent', () => {
       expect(img?.getAttribute('src')).toBe(
         `https://cdn.naomi.lgbt/becca/games/${adventure.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe(adventure.game);
-      const title = game?.querySelector('p');
+      expect(img?.getAttribute('alt')).toBe(adventure.alt);
+      const title = game?.querySelector('h2');
       expect(title?.textContent?.trim()).toBe(adventure.game);
+      const description = game?.querySelector('p');
+      expect(description?.textContent?.trim()).toBe(adventure.description);
     }
   });
 });

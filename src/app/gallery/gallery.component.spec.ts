@@ -22,6 +22,7 @@ describe('GalleryComponent', () => {
         artist: 'Moonlight',
         url: 'https://www.instagram.com/moonlightkcreations/',
         alt: 'Banner art of Becca.',
+        description: 'She uses this portrait to advertise her services.',
       },
       {
         fileName: 'Moonlight 3.png',
@@ -29,19 +30,39 @@ describe('GalleryComponent', () => {
         artist: 'Moonlight',
         url: 'https://www.instagram.com/moonlightkcreations/',
         alt: 'Becca with one eye closed, pushing through some trees in a forest, wearing a purple corset and pants.',
+        description:
+          'Becca loves exploring. You never know when you might find an ancient ruin.',
       },
     ];
     component.emotes = [
       {
         fileName: 'BeccaAngry.png',
         name: 'Angry',
+        alt: 'Becca with a fist raised, her face red from anger',
+        description: 'It does not take much to outrage Becca.',
       },
       {
         fileName: 'BeccaArt.png',
         name: 'Art',
+        alt: 'Becca with a beret on her head, paintbrushes and paint pallet in hand',
+        description: 'She does have an artistic side.',
       },
     ];
-    component.poses = ['cheer.png', 'magic.png'];
+    component.poses = [
+      {
+        fileName: 'cheer.png',
+        name: 'Cheerleader',
+        alt: 'Becca wearing a purple croptop, purple shorts, and purple footless stockings. Holding a pompom in each hand.',
+        description: 'She does her best to cheer Rosalia on.',
+      },
+      {
+        fileName: 'magic.png',
+        name: 'Magic Circle',
+        alt: 'Becca sitting on her bed, admiring the magic circle she drew on the floor.',
+        description:
+          'Even when she is supposed to be resting, Becca cannot resist the call of magic.',
+      },
+    ];
     fixture.detectChanges();
     compiled = fixture.nativeElement;
   });
@@ -110,11 +131,13 @@ describe('GalleryComponent', () => {
       expect(img?.getAttribute('src')).toBe(
         `https://cdn.naomi.lgbt/becca/art/${portrait.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe('');
-      const title = portraitBox?.querySelector('p');
-      expect(title?.textContent?.trim()).toBe(
-        `${portrait.name} By ${portrait.artist}`
-      );
+      expect(img?.getAttribute('alt')).toBe(portrait.alt);
+      const title = portraitBox?.querySelector('h2');
+      expect(title?.textContent?.trim()).toBe(portrait.name);
+      const ps = portraitBox?.querySelectorAll('p');
+      expect(ps?.length).toBe(2);
+      expect(ps?.[0].textContent?.trim()).toBe(portrait.description);
+      expect(ps?.[1].textContent?.trim()).toBe(`-- By ${portrait.artist}`);
     }
   });
 
@@ -157,9 +180,11 @@ describe('GalleryComponent', () => {
       expect(img?.getAttribute('src')).toBe(
         `https://cdn.naomi.lgbt/becca/emotes/${emote.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe('Naomi');
-      const title = emoteBox?.querySelector('p');
+      expect(img?.getAttribute('alt')).toBe(emote.alt);
+      const title = emoteBox?.querySelector('h2');
       expect(title?.textContent?.trim()).toBe(emote.name);
+      const description = emoteBox?.querySelector('p');
+      expect(description?.textContent?.trim()).toBe(emote.description);
     }
   });
 
@@ -195,18 +220,18 @@ describe('GalleryComponent', () => {
       const emoteBox = compiled.querySelector('.image');
       const imageLink = emoteBox?.querySelector('a');
       expect(imageLink?.getAttribute('href')).toBe(
-        `https://cdn.naomi.lgbt/becca/koikatsu/${pose}`
+        `https://cdn.naomi.lgbt/becca/koikatsu/${pose.fileName}`
       );
       expect(imageLink?.getAttribute('target')).toBe('_blank');
       const img = emoteBox?.querySelector('img');
       expect(img?.getAttribute('src')).toBe(
-        `https://cdn.naomi.lgbt/becca/koikatsu/${pose}`
+        `https://cdn.naomi.lgbt/becca/koikatsu/${pose.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe('Naomi');
-      const title = emoteBox?.querySelector('p');
-      expect(title?.textContent?.trim()).toBe(
-        component.getPoseName(component.poses.indexOf(pose))
-      );
+      expect(img?.getAttribute('alt')).toBe(pose.alt);
+      const title = emoteBox?.querySelector('h2');
+      expect(title?.textContent?.trim()).toBe(pose.name);
+      const description = emoteBox?.querySelector('p');
+      expect(description?.textContent?.trim()).toBe(pose.description);
     }
   });
 });
