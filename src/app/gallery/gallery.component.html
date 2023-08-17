@@ -22,7 +22,7 @@
     </p>
   </div>
   <div
-    *ngIf="view === 'portrait'"
+    *ngIf="view === 'portrait' && portraits.length"
     class="nes-container is-rounded is-centered image"
   >
     <h2 class="title">{{ portraits[currentPortraitIndex].name }}</h2>
@@ -64,7 +64,7 @@
     </select>
   </div>
   <div
-    *ngIf="view === 'emote'"
+    *ngIf="view === 'emote' && emotes.length"
     class="nes-container with-title is-centered is-rounded"
   >
     <h1 class="title">Emotes</h1>
@@ -111,7 +111,7 @@
     </select>
   </div>
   <div
-    *ngIf="view === 'pose'"
+    *ngIf="view === 'pose' && poses.length"
     class="nes-container with-title is-centered is-rounded"
   >
     <h1 class="title">Poses</h1>
